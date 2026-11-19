@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23ff6b4a'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%231c0f12' font-family='Georgia,serif' font-weight='bold'%3EL%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5</p>
+      <h1>Leonida Ledger</h1>
+      <p class="subtitle">The offline guide &amp; tracker for all 55 trophies — official names, descriptions and grades, a guide to each in our own words with its sources, a roadmap to the platinum, and every missable flagged.</p>
+      <p class="list-facts" id="listFacts">55 trophies &middot; 1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden on PlayStation until earned</p>
+    </div>
+    <div class="progress-card" id="progressCard" aria-live="polite">
+      <p class="big-count"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></p>
+      <div class="meter" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="meter"><div class="meter-fill" id="meterFill"></div></div>
+      <p class="grade-counts" id="gradeCounts"></p>
+      <p class="next-up" id="nextUp"></p>
+    </div>
+  </div>
+  <nav class="views" aria-label="Views">
+    <a href="#/" data-view="checklist" id="tabChecklist">Checklist</a>
+    <a href="#/roadmap" data-view="roadmap" id="tabRoadmap">Roadmap to Platinum</a>
+    <a href="#/missables" data-view="missables" id="tabMissables">Missables</a>
+  </nav>
+</header>
+
+<main>
+  <section class="toolbar" aria-label="Tracker controls">
+    <label class="search">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+    <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+    <label class="grade-filter">Grade
+      <select id="gradeFilter">
+        <option value="all">All grades</option>
+        <option value="platinum">Platinum</option>
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="bronze">Bronze</option>
+      </select>
+    </label>
+    <label class="spoiler-toggle"><input id="spoilerToggle" type="checkbox"> Hide story spoilers</label>
+    <div class="save-actions">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+    </div>
+  </section>
+
+  <p class="view-note" id="viewNote"></p>
+
+  <div class="content">
+    <section id="listView" aria-label="Trophy checklist">
+      <p class="showing" id="showingLine"></p>
+      <ul class="trophy-list" id="trophyList"></ul>
+      <p class="empty" id="emptyList" hidden>No trophies match these filters. Try clearing the search or choosing another kind.</p>
+    </section>
+
+    <section id="roadmapView" aria-label="Roadmap to the platinum" hidden></section>
+    <section id="missablesView" aria-label="Missable trophies" hidden></section>
+
+    <aside id="detailPane" aria-label="Trophy guide" aria-live="polite"></aside>
+  </div>
+
+  <footer>
+    <p>Guides are written in our own words from each trophy's official description. Where a step has not yet been checked in the game, the guide says so plainly instead of inventing a location. Sources for names, descriptions and grades: the official list as <a href="https://www.exophase.com/game/grand-theft-auto-vi-psn/trophies/">Exophase</a> and <a href="https://psnprofiles.com/trophies/43531-grand-theft-auto-vi">PSNProfiles</a> list it. Progress is saved in your browser (localStorage) and never leaves it. This is an unofficial fan guide — no Rockstar Games logo, artwork or game imagery is used.</p>
+  </footer>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
